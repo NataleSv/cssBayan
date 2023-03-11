@@ -92,7 +92,7 @@ img {
     }
 }
 
-/*---------------820px--------------------*/
+/*---------------820 x 1180px--------------------*/
 @media (min-width: 321px) { 
 
     h1 {
@@ -133,11 +133,11 @@ img {
     }
 
     .article:active h2 {
-        color: #6f91a1;
+        color: #6f91a1 !important;
     }
 
     .article:active path {
-        fill: #6f91a1;
+        fill: #6f91a1 !important;
     }
 
     .article:active img {
@@ -153,6 +153,7 @@ img {
         transform: rotate(0deg);
         transition: all .5s;
     }
+
 }
 
 @media (min-width: 1921px) { 
