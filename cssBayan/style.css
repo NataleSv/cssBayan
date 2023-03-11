@@ -16,7 +16,6 @@ input[type='radio'] {
     border-top: 0.2rem solid rgb(221, 221, 221) ;
     padding: 2vh 0;
 }
-
 .wrap-text {
     display: flex;
     justify-content: space-between; 
@@ -26,21 +25,20 @@ h2 {
     align-self: center;
     font-size: 0.8rem;
     font-weight: 100;
+    color: #6f91a1;
 }
-.wrap-svg{
+.wrap-svg {
     width: 2rem;
     height: 2rem;
     transform: rotate(45deg);  
 }
 .wrap-img {
     width: 50vw;
-    margin: 2vh auto;   
+    margin: 2vh auto; 
+    display:none;  
 }
 img {
     width: 100%;  
-}
-.img_1, .img_2, .img_3, .img_4, .img_5, .img_6 {
-    display:none; 
 }
 
 #radio_1:checked ~ .wrap-articles .article .img_1,
@@ -64,6 +62,24 @@ img {
     transition: all .5s;
 }
 
+#radio_1:checked ~ .wrap-articles .article .wrap-text .svg_1 path,
+#radio_2:checked ~ .wrap-articles .article .wrap-text .svg_2 path,
+#radio_3:checked ~ .wrap-articles .article .wrap-text .svg_3 path,
+#radio_4:checked ~ .wrap-articles .article .wrap-text .svg_4 path,
+#radio_5:checked ~ .wrap-articles .article .wrap-text .svg_5 path,
+#radio_6:checked ~ .wrap-articles .article .wrap-text .svg_6 path {
+    fill: #000000;
+}
+
+#radio_1:checked ~ .wrap-articles .article .wrap-text .text_1,
+#radio_2:checked ~ .wrap-articles .article .wrap-text .text_2,
+#radio_3:checked ~ .wrap-articles .article .wrap-text .text_3,
+#radio_4:checked ~ .wrap-articles .article .wrap-text .text_4,
+#radio_5:checked ~ .wrap-articles .article .wrap-text .text_5,
+#radio_6:checked ~ .wrap-articles .article .wrap-text .text_6 {
+    color: #000000;
+}
+
 @keyframes hiddenImg {
     from {
       width: 40vw;
@@ -76,6 +92,7 @@ img {
     }
 }
 
+/*---------------820px--------------------*/
 @media (min-width: 321px) { 
 
     h1 {
@@ -86,7 +103,7 @@ img {
         font-weight: 200;
     }
 }
-
+/*---------------1920px---------------*/
 @media (min-width: 821px) { 
     h1 {
         font-size: 2.5rem;  
@@ -94,6 +111,47 @@ img {
     h2 {
         font-size: 2rem;
         font-weight: 900;
+    }
+    .wrap-svg {
+        visibility: hidden;
+    }
+
+    .wrap-articles:hover .article {
+        cursor: pointer;
+    }
+
+    .wrap-articles:hover .article .wrap-text .wrap-svg {
+        visibility: visible;
+    }
+
+    .wrap-articles:hover h2 {
+        color: #000000;
+    }
+
+    .wrap-articles:hover path {
+        fill: #000000;
+    }
+
+    .article:active h2 {
+        color: #6f91a1;
+    }
+
+    .article:active path {
+        fill: #6f91a1;
+    }
+
+    .article:active img {
+        filter: opacity(70%);
+    }
+    
+    .article:hover .wrap-img {
+        display: block;
+        animation-duration: .5s;
+        animation-name: hiddenImg;
+    }
+    .article:hover .wrap-text .wrap-svg {
+        transform: rotate(0deg);
+        transition: all .5s;
     }
 }
 
