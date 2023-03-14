@@ -102,14 +102,12 @@ img {
 
 @keyframes hiddenImg {
     from {
-      width: 40vw;
+      width: 40%;
       filter: opacity(0%);
-      max-width: calc(108rem - 2vh);
     }
   
     to {
-      width: 50vw;
-      max-width: calc(100rem - 2vh);
+      width: 50%;
       filter:opacity(100%)
     }
 }
@@ -172,6 +170,6 @@ img {
     }
     .wrap-img {
         width: 60rem;
-    }
+    } 
 }
 
