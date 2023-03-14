@@ -80,14 +80,36 @@ img {
     color: #000000;
 }
 
+.article:active img {
+    filter: opacity(70%);
+}
+
+.wrap-articles:active .article h2 {
+    color: #000000;
+}
+
+.wrap-articles:active .article path {
+    fill: #000000;
+}
+
+.article:active h2 {
+    color: #6f91a1 !important;
+  }
+
+.article:active path {
+    fill: #6f91a1 !important;
+}
+
 @keyframes hiddenImg {
     from {
       width: 40vw;
       filter: opacity(0%);
+      max-width: calc(108rem - 2vh);
     }
   
     to {
       width: 50vw;
+      max-width: calc(100rem - 2vh);
       filter:opacity(100%)
     }
 }
@@ -132,18 +154,6 @@ img {
         fill: #000000;
     }
 
-    .article:active h2 {
-        color: #6f91a1 !important;
-    }
-
-    .article:active path {
-        fill: #6f91a1 !important;
-    }
-
-    .article:active img {
-        filter: opacity(70%);
-    }
-    
     .article:hover .wrap-img {
         display: block;
         animation-duration: .5s;
