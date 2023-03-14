@@ -124,6 +124,8 @@ img {
     }
 }
 /*---------------1920px---------------*/
+
+
 @media (min-width: 821px) { 
     h1 {
         font-size: 2.5rem;  
@@ -131,15 +133,17 @@ img {
     h2 {
         font-size: 2rem;
         font-weight: 900;
-    }
+    } 
+}
+
+@media (hover:hover) and (min-width: 821px){
+
     .wrap-svg {
         visibility: hidden;
-    }
-
+    }  
     .wrap-articles:hover .article {
         cursor: pointer;
     }
-
     .wrap-articles:hover .article .wrap-text .wrap-svg {
         visibility: visible;
     }
@@ -160,8 +164,7 @@ img {
     .article:hover .wrap-text .wrap-svg {
         transform: rotate(0deg);
         transition: all .5s;
-    }
-
+    } 
 }
 
 @media (min-width: 1921px) { 
